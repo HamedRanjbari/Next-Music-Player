@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway',sans-serif;
+    overflow: hidden;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+}
+header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    height: 10vh;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    width: 100%;
+}
+.cover{
+    position: relative;
+    width: 17vw;
+    height: auto;
+}
+.cover img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .7s ease;
+    border-radius: 20px;
+}
+.cover:hover .overlay {
+    transform: scale(1);
+}
+.title {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    top: 80%;
+    left: 50%;
+}
+.icon {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    top: 52%;
+    left: 50%;
+    cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+    .row{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .firstSection{
+        margin-top: 1rem;
+    }
+    .cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60vw;
+        margin-bottom: 1rem;
+    }
+    .title {
+        top: 60%;
+        left: 50%;
+        font-size: 1rem;
+    }
+    
+    .text {
+        top: 80%;
+        left: 50%;
+        font-size: .7rem;
+    }
+    .icon{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+    .row{
+        display: flex;
+        width: 100vw;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .firstSection{
+        margin-top: 1rem;
+    }
+    .cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30vw;
+        margin-bottom: 1rem;
+    }
+    .title {
+        top: 60%;
+        left: 50%;
+        font-size: 1.5rem;
+    }
+    
+    .text {
+        top: 85%;
+        left: 50%;
+        font-size: 1rem;
+    }
+    
+    .icon {
+        font-size: 3rem;
+    }
+}
